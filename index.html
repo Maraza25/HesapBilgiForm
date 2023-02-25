@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="centered-box">
+        
+
+    </div>
+
+
+    <form onsubmit="submit(e)" id="form">
+        <h1>İş Gücü Kaybı Tazminat Hesabı Özel Rapor Talep Formu</h1>
+        <h2>Kaza Geçiren Kişinin:</h2>
+        <label for="adsoyad">Adı Soyadı:</label>
+        <input type="text" id="adsoyad" name="adsoyad"><br><br>
+
+        <label for="dogumtarihi">Doğum Tarihi:</label>
+        <input type="date" id="dogumtarihi" name="dogumtarihi"><br><br>
+
+        <label for="netucret">Olay Tarihindeki NET Ücreti:</label>
+        <input type="number" id="netucret" name="netucret"><br><br>
+
+        <label for="isgucukaybi">İş Gücü Kayıp Yüzdesi (%):</label>
+        <input type="number" id="isgucukaybi" name="isgucukaybi" min="0"
+            max="100"><br><br><!--?hata mesajı türkceye çevirilebiliyor mu  -->
+
+        <label for="isgoremezliksuresi">Geçici İş Göremezlik Süresi:</label>
+        <input type="text" id="isgoremezliksuresi" name="isgoremezliksuresi"><br><br>
+
+        <label for="kazatarihi">Kaza Tarihi:</label>
+        <input type="date" id="kazatarihi" name="kazatarihi"><br><br>
+
+        <label for="karsitaraftakusur">Karşı Taraf Kusuru (%):</label>
+        <input type="number" id="karsitaraftakusur" name="karsitaraftakusur" min="0"
+            max="100"><br><br><!--?hata mesajı türkceye çevirilebiliyor mu  -->
+
+        <label for="aciklamalarveolay">Açıklamalar ve Olay:</label>
+        <textarea id="aciklamalarveolay" name="aciklamalarveolay" rows="4" cols="50"></textarea><br><br>
+
+        <h2>Kaza Türü:</h2>
+        <input type="radio" id="trafikKazasi" name="kazaTuru" value="trafik">
+        <label for="trafikKazasi">Trafik Kazası</label> <br>
+        
+        <input type="radio" id="isKazasi" name="kazaTuru" value="is">
+        <label for="isKazasi">İş Kazası</label><br>
+        
+        <input type="radio" id="diger" name="kazaTuru" value="diger">
+        <label for="diger">Diğer</label><br>
+       
+
+        <div id="hesapTuru">
+            <input type="radio" id="yerlesikYargitay" name="hesapTuru" value="yerlesik">
+            <label for="yerlesikYargitay">Yerleşik Yargıtay Uygulaması (Progresif Rant)</label>
+
+            
+            <div class="label-container">
+                <input type="radio" id="zmmsGenelSartlari" name="hesapTuru" value="zmms">
+                <label for="zmmsGenelSartlari">ZMMS Genel Şartlarına Göre Hesaplama</label>
+                <div class="sub-label"> (Aktüeryal Yöntem-Poliçe Tanzim Tarihi Gerekir)</div>
+            </div>
+            
+            <input type="radio" id="herIkiKapsam" name="hesapTuru" value="ikiRapor">
+            <label for="herIkiKapsam">Her İki Kapsamda Hesaplama (İki Rapor)</label>
+            
+        </div>
+        <div>
+            <input type="submit" value="Hesapla">
+
+
+    </form>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
