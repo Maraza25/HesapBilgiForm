@@ -1,0 +1,123 @@
+#form {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+h1 {
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(53, 111, 156, 0.5);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+input[type="radio"]:checked + label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.label-container {
+  display: inline-block;
+}
+
+.sub-label {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #777;
+}
+
+input[type="submit"] {
+    
+    
+  margin-left: 300px;
+  margin-top: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+/* Radio inputlarının görünümünü ayarla */
+input[type="radio"] {
+  display: none; /* Görünmez hale getir */
+}
+
+/* Seçili olan labellerin görünümünü ayarla */
+input[type="radio"]:checked + label {
+  background-color: #f8f8f8; /* Arka plan rengi değiştir */
+  border-color: #333; /* Kenarlık rengini değiştir */
+  box-shadow: none; /* Gölgelendirme efektini kaldır */
+}
+input[type="radio"]+label {
+    padding: 10px;
+  
+}
+#hesapTuru {
+  display: none;
+  margin-left: 200px;
+  margin-top: -140px;
+ 
+  
+}
+
+#hesapTuru label {
+  padding: 10px;
+}
+
+#trafikKazasi:checked ~ #hesapTuru {
+  display: block;
+}
+
+#isKazasi:checked ~ #hesapTuru {
+  display: none;
+}
